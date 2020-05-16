@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <cmath>
 
 namespace my
 {
@@ -112,48 +112,54 @@ namespace my
                 break;
         }
     }
-    float Price(std::string thing)
+    double Price(std::string thing)
     {
+        double inflation = (rand()%20)+1;
+        if (inflation <=10)
+            inflation = (inflation/100) + 1;
+        else
+            inflation = inflation - 10;
+            inflation = 1 - (inflation/100);
         if (thing == "apples")
-            return 2.50;
+            return 2.50 * inflation;
         else if (thing == "watermelons")
-            return 4.99;
+            return 4.99 * inflation;
         else if (thing == "gaming RGB mouses")
-            return 39.99;
+            return 39.99 * inflation;
         else if (thing == "slaves")
-            return 449.50;
+            return 449.50 * inflation;
         else if (thing == "grapes")
-            return 3.50;
+            return 3.50 * inflation;
         else if (thing == "shoes")
-            return 50;
+            return 50 * inflation;
         else if (thing == "helmets")
-            return 25.55;
+            return 25.55 * inflation;
         else if (thing == "cats")
-            return 1250;
+            return 1250 * inflation;
         else if (thing == "dogs")
-            return 125;
+            return 125 * inflation;
         else if (thing == "hamsters")
-            return 8;
+            return 8 * inflation;
         else if (thing == "candies")
-            return 0.39;
+            return 0.39 * inflation;
         else if (thing == "pineapples")
-            return 3.45;
+            return 3.45 * inflation;
         else if (thing == "bottles of beer")
-            return 5.50;
+            return 5.50 * inflation;
         else if (thing == "bottles of vodka")
-            return 21.50;
+            return 21.50 * inflation;
         else if (thing == "pierogies")
-            return 1.39;
+            return 1.39 * inflation;
         else if (thing == "winRAR licenses")
-            return 35;
+            return 35 * inflation;
         else if (thing == "bottles of Coca-Cola")
-            return 4;
+            return 4 * inflation;
         else if (thing == "T-shirts")
-            return 23;
+            return 23 * inflation;
         else if (thing == "bananas")
-            return 3;
+            return 3 * inflation;
         else if (thing == "Nvidia 1080s")
-            return 799;
+            return 799 * inflation;
         else
             return 21.37;
         
